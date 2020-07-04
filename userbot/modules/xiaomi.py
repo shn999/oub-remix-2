@@ -169,19 +169,13 @@ async def _(event):
 
 CMD_HELP.update({
 "xiaomi":
-"For Xiaomi devices only!\
+"For Xiaomeme devices only!\
 \n\n`.firmware` (codename)\
      \nUsage : Get lastest Firmware\
 \n\n`.pb` (codename)\
-<<<<<<< HEAD
-     \nUsage : Get latest PBRP\
-\n\n`.eu` (codename)\
-     \nUsage : Get latest Xiaomi.eu Rom for your device\
-=======
      \nUsage : Get latest PitchBlack Recovery\
 \n\n`.specs` (codename)\
      \nUsage : Get quick spec information about device\
->>>>>>> 1232fecb9ce3b49f28de56ce037be86ff7ce7782
 \n\n`.fastboot` (codename)\
      \nUsage : Get latest fastboot MIUI\
 \n\n`.recovery` (codename)\
@@ -192,4 +186,3 @@ CMD_HELP.update({
     \nUsage: fetches latest vendor\
 \n\n`.of` (codename)\
      \nUsage : Get latest ORangeFox Recovery"})
-     
