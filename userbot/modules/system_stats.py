@@ -243,12 +243,7 @@ CMD_HELP.update({
 \n\n`.resetalive`\
 \nUsage: Resets the user to default.\
 \n\n`.db`\
-<<<<<<< HEAD
-\nUsage:Shows database related info."    
-})
-=======
 \nUsage:Shows database related info.\
 \n\n.`.spc`\
 \nUsage:Show system specification."   
 })  
->>>>>>> bf63b8111c612b6fbd7cc73a36547f6e3b5133b4
