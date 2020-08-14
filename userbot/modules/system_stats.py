@@ -190,6 +190,7 @@ async def pipcheck(pip):
 
 @register(outgoing=True, pattern="^.start$")
 async def amireallyalive(alive):
+<<<<<<< HEAD
 
     """ For .alive command, check if the bot is running.  """
     await alive.edit("`"
@@ -204,6 +205,28 @@ async def amireallyalive(alive):
                      f"Even Dead, I'm The Hero! 😎 "
                      "`")
 
+=======
+    """ For .start command, check if the bot is running.  """
+    logo = ALIVE_LOGO
+    output = (f"`🤖 STATUS: Remix is running ✅`\n"
+             f"`Telethon version`: {version.__version__} \n"
+             f"`Python version🐍`: {python_version()} \n"
+             f"`Bot Version🤘: Remix {BOT_VER}` \n"
+             f"==================================== \n"
+             f"User 👨‍🚀: {DEFAULTUSER} \n"
+             f"Maintainer 🏄‍♂️: @heyworld \n"
+             f"====================================\n")
+    if ALIVE_LOGO:
+        try:
+            logo = ALIVE_LOGO
+            await bot.send_file(alive.chat_id, logo, caption=output)
+            await alive.delete()
+        except BaseException:
+            await alive.edit(output + "\n\n *`The provided logo is invalid."
+                             "\nMake sure the link is directed to the logo picture`")
+    else:
+        await alive.edit(output)
+>>>>>>> f7fca28efc78d3cdf628d64f45a474bf82147a0a
                          
 
 
