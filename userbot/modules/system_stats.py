@@ -219,7 +219,6 @@ async def pipcheck(pip):
 
 @register(outgoing=True, pattern="^.start$")
 async def amireallyalive(alive):
-<<<<<<< HEAD
 
 
     """ For .alive command, check if the bot is running.  """
@@ -232,37 +231,10 @@ async def amireallyalive(alive):
                      f"Owner: S A Sohan \n"
                      " \n"
                      f"Sohan'z Bot: E.D.I.T.H. \n"
-                     f"Even Dead, I'm The Hero! 😎 "
+                     f"Even Dead, I'm The Hero! 😎 \n"
+                     f"\n`Bot Uptime ⏱️`: {uptime} "
                      "`")
 
-=======
-    """ For .start command, check if the bot is running.  """
-    logo = ALIVE_LOGO
-    uptime = await get_readable_time((time.time() - StartTime))
-    output = (f"`🤖 STATUS: Remix is running ✅`\n"
-             f"`Telethon version`: {version.__version__} \n"
-             f"`Python version🐍`: {python_version()} \n"
-             f"`Bot Version🤘: Remix {BOT_VER}` \n"
-             f"==================================== \n"
-             f"`User 👨‍🚀`: {DEFAULTUSER} \n"
-             f"`Maintainer 🏄‍♂️`: @heyworld \n"
-             f"`Bot Uptime ⏱️`: {uptime} \n"
-             f"====================================\n")
-    if ALIVE_LOGO:
-        try:
-            logo = ALIVE_LOGO
-            await alive.delete()
-            pic_alive = await bot.send_file(alive.chat_id, logo, caption=output)
-            await asyncio.sleep(40)
-            await pic_alive.delete()
-        except BaseException:
-            await alive.edit(output + "\n\n *`The provided logo is invalid."
-                             "\nMake sure the link is directed to the logo picture`")
-    else:
-        await alive.edit(output)
-        await asyncio.sleep(25)
-        await alive.delete()
->>>>>>> 11fba5d51684c1a946e62a41893105f2d1e92448
 
 @register(outgoing=True, pattern="^.aliveu")
 async def amireallyaliveuser(username):
