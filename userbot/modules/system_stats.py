@@ -228,11 +228,10 @@ async def amireallyalive(alive):
                      f"Telethon version: {version.__version__} \n"
                      f"Python: {python_version()} \n"
                      " \n"
-                     f"Owner: S A Sohan \n"
+                     f"Owner: <b>S A Sohan</b> \n"
                      " \n"
                      f"Sohan'z Bot: E.D.I.T.H. \n"
-                     f"Even Dead, I'm The Hero! 😎 \n"
-                     f"\n`Bot Uptime ⏱️`: {uptime} "
+                     f"Even Dead, I'm The Hero! 😎 "
                      "`")
 
 
