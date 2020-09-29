@@ -288,6 +288,7 @@ async def unblockpm(unblock):
             " was unblocc'd!.",
         )
 
+# @register(incoming=True, outgoing=True disable_edited=True)        
 @register(incoming=True, disable_edited=True)
 async def monito_p_m_s(event):
     sender = await event.get_sender()
