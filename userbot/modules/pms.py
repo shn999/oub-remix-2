@@ -25,11 +25,19 @@ from userbot import (COUNT_PM, CMD_HELP, BOTLOG, BOTLOG_CHATID, PM_AUTO_BAN,
 from userbot.events import register
 
 # ========================= CONSTANTS ============================
+#UNAPPROVED_MSG = (
+#    "`⚠️ HeY! This is an automated message ⚠️\n\n`"
+#    "`Me, assiatant of my BO$$, haven't approved you to PM yet. `"
+#    "`Please wait for me to look in, I mostly approve PMs.\n\n`"
+#    "`Until then, please don't spam my Master's PM, you'll get blocked and reported if you do so!`")
+# =================================================================
+
+# ========================= CONSTANTS ============================
 UNAPPROVED_MSG = (
     "`⚠️ HeY! This is an automated message ⚠️\n\n`"
-    "`Me, assiatant of my BO$$, haven't approved you to PM yet. `"
-    "`Please wait for me to look in, I mostly approve PMs.\n\n`"
-    "`Until then, please don't spam my Master's PM, you'll get blocked and reported if you do so!`")
+    "`Me, assiatant of my BOSS, haven't approved you to PM yet!`"
+    "`Until then, please don't spam my Master's PM, you'll get blocked and reported if you do so!`"
+    "`But you can contact with him via` <b>@sashn9bot</b> `bot.`")
 # =================================================================
 
 NO_PM_LOG_USERS = []
