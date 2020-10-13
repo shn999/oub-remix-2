@@ -35,9 +35,9 @@ from userbot.events import register
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = (
     "`⚠️ HeY! This is an automated message ⚠️\n\n`"
-    "`Me, assiatant of my BOSS, haven't approved you to PM yet!`"
-    "`Until then, please don't spam my Master's PM, you'll get blocked and reported if you do so!`"
-    "`But you can contact with him via` <b>@sashn9bot</b> `bot.`")
+    "`Me, assiatant of my BOSS, haven't approved you to PM yet! `"
+    "`Until then, please don't spam my Master's PM, you'll get blocked and reported if you do so!\n\n`"
+    "`But you can contact with him via` @sashn9bot `bot.`")
 # =================================================================
 
 NO_PM_LOG_USERS = []
