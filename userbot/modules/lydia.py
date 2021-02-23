@@ -62,7 +62,7 @@ async def rlda(event):
         reply = await event.get_reply_message()
         msg = reply.text
         text_rep = session.think_thought((session_id, msg))
-        await event.edit("**hey friend**: {0}".format(text_rep))
+        await event.edit("**Hiii**: {0}".format(text_rep))
     except Exception as e:
         await event.edit(str(e))
 
