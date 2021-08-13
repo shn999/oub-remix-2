@@ -23,7 +23,7 @@ GITHUB = "https://github.com"
 
 @register(outgoing=True, pattern=r"^\.magisk$")
 async def magisk(request):
-    magisk_repo = "https://raw.githubusercontent.com/topjohnwu/magisk_files/"
+    magisk_repo = "https://raw.githubusercontent.com/topjohnwu/magisk-files/"
     magisk_dict = {
         "⦁ **Stable**":
         magisk_repo + "master/stable.json",
