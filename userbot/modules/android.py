@@ -23,7 +23,7 @@ GITHUB = "https://github.com"
 
 @register(outgoing=True, pattern=r"^\.magisk$")
 async def magisk(request):
-    magisk_repo = "https://raw.githubusercontent.com/topjohnwu/magisk-files/"
+    magisk_repo = "https://raw.githubusercontent.com/topjohnwu/magisk_files/"
     magisk_dict = {
         "⦁ **Stable**":
         magisk_repo + "master/stable.json",
@@ -35,13 +35,24 @@ async def magisk(request):
     releases = "**Latest Magisk Release**\n\n"
     for name, release_url in magisk_dict.items():
         data = get(release_url).json()
+        if "canary" in release_url:
+            data['app']['link'] = (
+                magisk_repo +
+                "canary/" + data['app']['link']
+            )
+            data['magisk']['link'] = (
+                magisk_repo +
+                "canary/" + data['magisk']['link']
+            )
+            data['uninstaller']['link'] = (
+                magisk_repo +
+                "canary/" + data['uninstaller']['link']
+            )
+
         releases += (
-            f'{name}: [APK v{data["magisk"]["version"]}]({data["magisk"]["link"]}) | '
-            f'[Changelog]({data["magisk"]["note"]})\n'
-            #f'{name}: [ZIP v{data["magisk"]["version"]}]({data["magisk"]["link"]}) | '
-            #f'[APK v{data["app"]["version"]}]({data["app"]["link"]}) | '
-            #f'[Changelog]({data["magisk"]["note"]})\n'
-            #f'[Uninstaller]({data["uninstaller"]["link"]})\n'
+            f'{name}: [ZIP v{data["magisk"]["version"]}]({data["magisk"]["link"]}) | '
+            f'[APK v{data["app"]["version"]}]({data["app"]["link"]}) | '
+            f'[Uninstaller]({data["uninstaller"]["link"]})\n'
         )
     await request.edit(releases)
 
@@ -319,7 +330,7 @@ CMD_HELP.update({
 \nUsage: Search for android device codename.\
 \n\n`.pixeldl` **<download.pixelexperience.org>**\
 \nUsage: Download pixel experience ROM into your userbot server.\
-\n\n`.spec <brand> <device>`\
+\n\n`.specs <brand> <device>`\
 \nUsage: Get device specifications info.\
 \n\n`.twrp <codename>`\
 \nUsage: Get latest twrp download for android device.\
